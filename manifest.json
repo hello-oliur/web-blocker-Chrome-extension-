@@ -1,0 +1,23 @@
+{
+	"browser_action": {
+		"default_title": "Make this page red"
+	},
+   "background": {
+      "persistent": true,
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "content.js"],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://apis.google.com https://www.gstatic.com/ https://*.firebaseio.com https://maxcdn.bootstrapcdn.com https://*.googleapis.com https://gitcdn.github.io ; object-src 'self'",
+   "description": "Extension can be used to block website and keywords",
+   
+   "manifest_version": 2,
+   "name": "Web blocker",
+   "permissions": [ "\u003Call_urls>", "activeTab", "notifications", "tabs", "storage", "webRequest", "webRequestBlocking", "unlimitedStorage", "proxy" ],
+   "version": "1.0.0"
+}
+
+
+

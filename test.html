@@ -1,0 +1,77 @@
+<html>
+<head>
+
+
+</head>
+
+<body>
+
+
+Name: <input type="text" id="names" /><br>
+Number: <input type="text" id="Number" /><br>
+Email: <input type="text" id="emais" /><br>
+
+<button id="subm">Submit</button>
+
+<!--Firebase Libraries-->
+
+<script type="module">
+  
+  
+    // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+	const firebaseConfig = {
+	  apiKey: "AIzaSyC1z3VcdpzdDcm6EC_B6658qIQnF7Ru-sY",
+	  authDomain: "extend-71139.firebaseapp.com",
+	  projectId: "extend-71139",
+	  storageBucket: "extend-71139.appspot.com",
+	  messagingSenderId: "847781357269",
+	  appId: "1:847781357269:web:cc9c08ca7006bf4a58a45c"
+	};
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  
+  import {getDatabase, ref, set, child, update, remove} from "https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js";
+
+	
+	const db = getDatabase();
+	
+
+document.getElementById("subm").onclick = () => {
+	var names = document.getElementById("names");
+	var numbers = document.getElementById("Number");
+	var emails = document.getElementById("emais");
+	
+
+	var Uid = "55";
+	
+	set(ref(db, "test/"+Uid),{
+		Uname: names,
+		Unumber: numbers,
+		Umail: emails,
+	})
+	.then(() => {
+		alert("store success");
+	})
+	.catch((error) => {
+		alert("faild");
+	});
+	
+}
+
+
+
+	
+
+
+</script>
+
+
+
+</body>
+</html>
