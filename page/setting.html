@@ -1,0 +1,383 @@
+<html>
+<head>
+
+<link href="../css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
+
+
+</head>
+
+<body>
+
+<div class="main">
+	
+	<!-------------------   Start Menu bar    ------------------!-->
+	
+	<div class="sidbar-main">
+		<div class="menu-section">
+			<div class="head-section">
+				<img src="../img/blocker_icon.png" class="logo-img"/>
+				<h1>Blockit</h1>
+				<div style="margin-left: 50px;">
+					<label class="switch">
+						  <input type="checkbox" id="mainSwitch">
+						  <span class="slider round"></span>
+						</label>
+				</div>
+			</div>
+			<hr>
+			<div class="opt-section">
+				<div class="opt-button" id="blockSiteMenu">
+					<img src="../img/logo/block-on.svg" class="opt-img">
+					<div class="opt-text">Block Sites</div>
+				</div>
+				
+				<div class="opt-button" id="focusMenu">
+					<img src="../img/logo/focus-off.svg" class="opt-img">
+					<div class="opt-text">Focus Mode</div>
+				</div>
+				
+				<div class="opt-button" id="blockKeywordMenu">
+					<img src="../img/logo/block-by-words-off.svg" class="opt-img">
+					<div class="opt-text">Block by Keyword</div>
+				</div>
+				
+				<div class="opt-button" id="featureMenu">
+					<img src="../img/logo/customize-block-page-off.svg" class="opt-img">
+					<div class="opt-text">Features</div>
+				</div>
+				
+				<div class="opt-button" id="msgMenu">
+					<img src="../img/logo/categories-off.svg" class="opt-img">
+					<div class="opt-text">Custom Message</div>
+				</div>
+				
+				<div class="opt-button" id="urlMenu">
+					<img src="../img/logo/blocked-header-menu-redirect.svg" class="opt-img">
+					<div class="opt-text">Custom Redirect URL</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-------------------   End Menu bar    ------------------!-->
+	
+	<!-------------------   Start Block List    ------------------!-->
+	
+	<div class="main-body" id="blockSection">
+	
+		<div style="display: flex;">
+			<div class="title-section">
+				<div class="title-text">Block List</div>
+				<div class="sub-title">Put the site URL and Block the site</div>
+			</div>
+			
+		</div>
+		
+		<div class="inpt-section">
+			<div style="display: flex; padding: 10px 0px;">
+				<input type="text" id="blockInpt" class="inpt-fild" placeholder="Enter a web Address (Ex: facebook.com)">
+				<button class="add-btn" style="display:flex;" id="blockAddBtn">+ Add Site</button>
+			</div>
+			<div>
+				<div class="text-result">BLOCKED SITES </div>
+				<div id="showSites">
+					
+				</div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+	
+	<!-------------------   End Block List   ------------------!-->
+	
+	<!-------------------   Start Focus Mode   ------------------!-->
+	
+	
+	<div class="main-body" style="display: none;" id="focusSection">
+	
+		<div style="display: flex;">
+			<div class="title-section">
+				<div class="title-text">Focus Mode</div>
+				<div class="sub-title" style="width: 85%;">To focus on a task and be more productive use focus mode to set your work time. Add sites to your block list to avoid distractions during a focus session.</div>
+			</div>
+			
+		</div>
+		
+		
+		
+		<div class="inpt-section">
+			<div>
+				<button class="btn-start-focus"> Start focus session </button>
+			</div>
+			<div style="padding: 30px 0px;margin-bottom: -20px;font-size: 15px;font-weight: 600;color: #6e6e6e;">
+				TIMER SETUP
+			</div>
+			<div style="display: flex; padding: 10px 0px;align-items: center;border-bottom: 1px solid #d5d5d5;border-bottom-width: thin;">
+				
+				<div style="width: 80%;padding: 10px 0px;">
+					<div style="font-size: 18px;font-weight: 600;color: #464646;">
+						Start Focus Time
+					</div>
+					<div style="font-size: 16px;color: #767676;">
+						Time to focus you work, don't west your time to sikking this ass
+					</div>
+				</div>
+				
+				<div>
+					<input type="time" class="inpt-nmbr" placeholder="25" />
+				</div>
+				
+				<div style="padding: 10px 15px; font-size: 16px; color:#767676;">
+					Start
+				</div>
+				
+			</div>
+			
+			<div style="display: flex; padding: 10px 0px;align-items: center;border-bottom: 1px solid #d5d5d5;border-bottom-width: thin;">
+				
+				<div style="width: 80%;padding: 10px 0px;">
+					<div style="font-size: 18px;font-weight: 600;color: #464646;">
+						End Focus Time
+					</div>
+					<div style="font-size: 16px;color: #767676;">
+						Time to focus you work, don't west your time to sikking this ass
+					</div>
+				</div>
+				
+				<div>
+					<input type="time" class="inpt-nmbr" placeholder="25" />
+				</div>
+				
+				<div style="padding: 10px 15px; font-size: 16px; color:#767676;">
+					End
+				</div>
+				
+			</div>
+			
+			<div>
+				<div class="text-result">BLOCKED SITES </div>
+				<div id="focusBlockSection">
+				
+				</div>
+				
+			</div>
+			<div>
+				<div class="text-result">BLOCKED KEYWORDS </div>
+				
+				<div id="focuseShowKeyword">
+					
+				</div>
+				
+			</div>
+		</div>
+		
+		
+	</div>
+	
+	<!-------------------   End Focus Mode   ------------------!-->
+	
+	<!-------------------   Start Keyword Blocker   ------------------!-->
+	
+	<div class="main-body" style=" display:none;" id="keywordSection">
+	
+		<div style="display: flex;">
+			<div class="title-section">
+				<div class="title-text">Block By Keywords</div>
+				<div class="sub-title">Put the Keywords and Block the those keyword</div>
+			</div>
+			
+		</div>
+		
+		<div class="inpt-section">
+			<div style="display: flex; padding: 10px 0px;">
+				<input id="keywordInpt" type="text" class="inpt-fild" placeholder="Enter a keyword (Ex: hot videos)">
+				<button id="keywordAddBtn" class="add-btn" style="display:flex;">+ Add Keyword</button>
+			</div>
+			<div>
+				<div class="text-result">BLOCKED KEYWORDS </div>
+				
+				<div id="showKeyword">
+					
+				</div>
+				
+			</div>
+		</div>
+		
+		
+	</div>
+	
+	
+	<!-------------------   End Start Keyword   ------------------!-->
+	
+	<!-------------------   Start Features   ------------------!-->
+	
+	<div class="main-body" id="featuresSection" style="display: none;">
+	
+		<div style="display: flex;">
+			<div class="title-section">
+				<div class="title-text">Features</div>
+				<div class="sub-title">Put the site URL and Block the site</div>
+			</div>
+			
+		</div>
+		
+		<div class="feature-section">
+			<div class="feature-texts">Premium Features</div>
+			<div class="feature-box">
+				<div class="fetogelsec">
+					<div class="fe-optn-text">Sync with other devices</div>
+					<div class="fe-tgl-section">
+						<label class="switch">
+						  <input type="checkbox" id="syncOther">
+						  <span class="slider round"></span>
+						</label>
+					</div>
+				</div>
+				
+				<div class="fetogelsec">
+					<div class="fe-optn-text">Get notified on Uninstalling the extension</div>
+					<div class="fe-tgl-section">
+						<label class="switch">
+						  <input type="checkbox" id="getNotification">
+						  <span class="slider round"></span>
+						</label>
+					</div>
+				</div>
+				
+				<div class="fetogelsec">
+					<div class="fe-optn-text">Strick Blocking (VPN)</div>
+					<div class="fe-tgl-section">
+						<label class="switch">
+						  <input type="checkbox" id="startVpn">
+						  <span class="slider round"></span>
+						</label>
+					</div>
+				</div>
+				
+				<div class="fetogelsec">
+					<div class="fe-optn-text">Adult Image Blocking based on AI</div>
+					<div class="fe-tgl-section">
+						<label class="switch">
+						  <input type="checkbox" id="adltAI">
+						  <span class="slider round"></span>
+						</label>
+					</div>
+				</div>
+			
+			</div>
+		
+			<div class="feature-texts" style="margin-top: 20px;">Free Features</div>
+			<div class="feature-box">
+				
+				<div class="fetogelsec">
+					<div class="fe-optn-text">Accountability Partner/Password Protection</div>
+					<div class="fe-tgl-section">
+						<label class="switch">
+						  <input type="checkbox" id="AccPass">
+						  <span class="slider round"></span>
+						</label>
+					</div>
+				</div>
+				
+				<div class="fetogelsec">
+					<div class="fe-optn-text">Block images and videos</div>
+					<div class="fe-tgl-section">
+						<label class="switch">
+						  <input type="checkbox" id="blocImg">
+						  <span class="slider round"></span>
+						</label>
+					</div>
+				</div>
+				
+				<div class="fetogelsec">
+					<div class="fe-optn-text">Block all internet</div>
+					<div class="fe-tgl-section">
+						<label class="switch">
+						  <input type="checkbox" id="blockINTR">
+						  <span class="slider round"></span>
+						</label>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+		
+		
+	</div>
+
+
+	
+	
+	<!-------------------   End Features   ------------------!-->
+	
+	<!-------------------   Start Custom Message   ------------------!-->
+
+	<div class="main-body" id="msgSection" style="display: none;">
+	
+		<div style="display: flex;">
+			<div class="title-section">
+				<div class="title-text">Custom Message</div>
+				<div class="sub-title">Put the message that show for blocking site</div>
+			</div>
+			
+		</div>
+		
+		<div class="inpt-section">
+			<div style="display: flex; padding: 10px 0px;">
+				<input type="text" class="inpt-fild" id="customMsg" placeholder="Set Custom Message">
+				<button class="add-btn" style="display:flex;" id="addMsg">Set Message</button>
+			</div>
+			
+		</div>
+		
+		
+	</div>
+	
+	
+	
+	
+	<!-------------------   End message section   ------------------!-->
+	
+	<!-------------------   Start Custom Redirect URL   ------------------!-->
+
+	<div class="main-body" id="urlSection" style="display: none;">
+	
+		<div style="display: flex;">
+			<div class="title-section">
+				<div class="title-text">Custom Redirect URL</div>
+				<div class="sub-title">Put the site URL and Block will redirect there</div>
+			</div>
+			
+		</div>
+		
+		<div class="inpt-section">
+			<div style="display: flex; padding: 10px 0px;">
+				<input id="rediUrl" type="text" class="inpt-fild" placeholder="Set Custom Redirect URL (Ex: google.com)">
+				<button id="rediUrlBtn" class="add-btn" style="display:flex;">Set URL</button>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+
+
+</div>
+
+
+
+<script src="../js/setting.js"></script>
+<script src="../js/switch.js"></script>
+
+
+</body>
+</html>
